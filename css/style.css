@@ -139,3 +139,148 @@ section {
     border-top: 1px solid var(--lavender);
   }
 }
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s, color 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn-primary {
+  background: var(--white);
+  color: var(--purple-dark);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.btn-outline {
+  border-color: var(--white);
+  color: var(--white);
+}
+
+.btn-outline:hover {
+  background: var(--white);
+  color: var(--purple-dark);
+}
+
+/* ===== Hero ===== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 110px 8% 70px;
+  overflow: hidden;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--purple-dark) 0%, var(--purple) 100%);
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -120px;
+  right: -120px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.profile-photo {
+  flex-shrink: 0;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 8px solid var(--white);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  max-width: 560px;
+}
+
+.hero-text h1 {
+  margin-bottom: 8px;
+  font-size: 2.8rem;
+  line-height: 1.2;
+}
+
+.hero-text h2 {
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--purple-light);
+}
+
+.hero-text p {
+  margin-bottom: 14px;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.objective {
+  padding-left: 14px;
+  border-left: 3px solid var(--purple-light);
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 26px;
+}
+
+/* Tablet and mobile hero */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    gap: 36px;
+    padding-top: 100px;
+    text-align: center;
+  }
+
+  .profile-photo {
+    width: 220px;
+    height: 220px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .objective {
+    padding-left: 0;
+    border-left: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 1.7rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1rem;
+  }
+}

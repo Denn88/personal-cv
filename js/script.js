@@ -10,3 +10,4 @@ menuToggle.addEventListener('click', () => {
 navLinks.querySelectorAll('a').forEach((link) => {
   link.addEventListener('click', () => navLinks.classList.remove('open'));
 });
+
