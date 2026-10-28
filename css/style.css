@@ -654,3 +654,90 @@ section {
     transform: none;
   }
 }
+
+/* ===== Social Links ===== */
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.social-btn {
+  padding: 12px 28px;
+  border-radius: 999px;
+  background: var(--purple);
+  color: var(--white);
+  font-weight: 600;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.social-btn:hover {
+  background: var(--purple-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(59, 10, 111, 0.3);
+}
+
+/* ===== Loading Screen ===== */
+.loader {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--purple-dark), var(--purple));
+  z-index: 2000;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+.loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.spinner {
+  width: 56px;
+  height: 56px;
+  border: 5px solid rgba(255, 255, 255, 0.25);
+  border-top-color: var(--white);
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===== Scroll Reveal ===== */
+.reveal {
+  opacity: 0;
+}
+
+.reveal.visible {
+  opacity: 1;
+  animation: fadeUp 0.7s ease backwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal.visible {
+    animation: none;
+  }
+}
