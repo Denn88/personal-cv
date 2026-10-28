@@ -4,7 +4,7 @@ A responsive personal curriculum vitae (CV) website that presents my profile, ed
 
 ## Live Website
 
-Vercel: https://YOUR-PROJECT.vercel.app
+Vercel: https://deniele-lodovice-cv.vercel.app
 
 ## Features
 
