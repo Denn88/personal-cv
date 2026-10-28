@@ -1,0 +1,42 @@
+/* ===== Color Variables ===== */
+:root {
+  --purple-dark: #3b0a6f;
+  --purple: #6d28d9;
+  --purple-light: #c4b5fd;
+  --lavender: #f3edff;
+  --white: #ffffff;
+  --text: #2d2540;
+  --muted: #6b6480;
+}
+
+/* ===== Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  scroll-margin-top: 70px;
+}
